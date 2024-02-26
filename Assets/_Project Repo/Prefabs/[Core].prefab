@@ -52,7 +52,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 9194825136647052200}
         m_TargetAssemblyTypeName: PlayableStateController, Assembly-CSharp
-        m_MethodName: PlayTimeline
+        m_MethodName: Play
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -139,6 +139,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7029124267981277490}
+  - component: {fileID: 8312191061918762518}
   m_Layer: 0
   m_Name: Scene Loader
   m_TagString: Untagged
@@ -161,6 +162,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6117577607450592484}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8312191061918762518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7181284952764079162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14a9ebc91ef71ee4daef8cf1ab1476bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screenFade: {fileID: 0}
+  _levelToLoad: Scenario 1
 --- !u!1 &7422132433029182944
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,7 +280,7 @@ PlayableDirector:
   m_GameObject: {fileID: 7939535486574888416}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 33f1d9413d38c99448a1184c1d3430b5, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 4f8fd7b491d51454e89870f292fcc69e, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -310,8 +325,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0db1716b686efa4b91528333f084a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  status: 0
+  playStatus: 0
+  Director: {fileID: 3629328622278388745}
   DirectorModels:
-  - currentWrapMode: 0
+  - indexName: CTA
+    currentWrapMode: 0
     progressionState: 1
     targetIndex: 0
     timeline: {fileID: 11400000, guid: 4f8fd7b491d51454e89870f292fcc69e, type: 2}
@@ -331,7 +350,9 @@ MonoBehaviour:
       OnFinish:
         m_PersistentCalls:
           m_Calls: []
-  - currentWrapMode: 0
+    transitionDuration: 0.1
+  - indexName: Disclaimer
+    currentWrapMode: 0
     progressionState: 1
     targetIndex: 0
     timeline: {fileID: 11400000, guid: 33f1d9413d38c99448a1184c1d3430b5, type: 2}
@@ -351,7 +372,9 @@ MonoBehaviour:
       OnFinish:
         m_PersistentCalls:
           m_Calls: []
-  - currentWrapMode: 0
+    transitionDuration: 0.1
+  - indexName: Instructions
+    currentWrapMode: 0
     progressionState: 0
     targetIndex: 0
     timeline: {fileID: 11400000, guid: 84801547871e63646bccc6b8cc9c324f, type: 2}
@@ -370,27 +393,21 @@ MonoBehaviour:
           m_Calls: []
       OnFinish:
         m_PersistentCalls:
-          m_Calls: []
-  - currentWrapMode: 0
-    progressionState: 0
-    targetIndex: 0
-    timeline: {fileID: 11400000, guid: 84801547871e63646bccc6b8cc9c324f, type: 2}
-    directorEvent:
-      OnInit:
-        m_PersistentCalls:
-          m_Calls: []
-      OnPlay:
-        m_PersistentCalls:
-          m_Calls: []
-      OnResume:
-        m_PersistentCalls:
-          m_Calls: []
-      OnPause:
-        m_PersistentCalls:
-          m_Calls: []
-      OnFinish:
-        m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 8312191061918762518}
+            m_TargetAssemblyTypeName: SceneAsyncLoader, Assembly-CSharp
+            m_MethodName: LoadScene
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+    transitionDuration: 0.1
+  progressionDelay: 0
 --- !u!1 &8233274490373668230
 GameObject:
   m_ObjectHideFlags: 0

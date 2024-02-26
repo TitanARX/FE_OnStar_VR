@@ -27,13 +27,8 @@ public class SceneAsyncLoader : MonoBehaviour
 
     public void LoadScene()
     {
-        if (screenFade || _levelToLoad == string.Empty)
-            return;
+        Debug.LogErrorFormat("Loading Scene");
 
-        Sequence _loadSequence = DOTween.Sequence();
-
-        _loadSequence.PrependCallback(() => screenFade.FadeOut())
-                        .AppendInterval(1.75f)
-                            .OnComplete(() => SceneManager.LoadScene(_levelToLoad));
+        SceneManager.LoadScene(_levelToLoad);
     }
 }

@@ -68,6 +68,8 @@ public class PlayableStateController : MonoBehaviour
 
     private void OnValidate()
     {
+        Director = GetComponent<PlayableDirector>();
+
         AssignIndexNames();
     }
 
@@ -77,7 +79,7 @@ public class PlayableStateController : MonoBehaviour
         if (Director == null)
             return;
 
-        Director = GetComponent<PlayableDirector>();
+        
         Director.extrapolationMode = DirectorWrapMode.None;
         Director.playOnAwake = false;
 
