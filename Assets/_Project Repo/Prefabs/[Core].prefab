@@ -331,7 +331,7 @@ MonoBehaviour:
   DirectorModels:
   - indexName: CTA
     currentWrapMode: 0
-    progressionState: 1
+    progressionState: 2
     targetIndex: 0
     timeline: {fileID: 11400000, guid: 4f8fd7b491d51454e89870f292fcc69e, type: 2}
     directorEvent:
@@ -394,7 +394,7 @@ MonoBehaviour:
       OnFinish:
         m_PersistentCalls:
           m_Calls:
-          - m_Target: {fileID: 8312191061918762518}
+          - m_Target: {fileID: 0}
             m_TargetAssemblyTypeName: SceneAsyncLoader, Assembly-CSharp
             m_MethodName: LoadScene
             m_Mode: 1
@@ -490,7 +490,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   model:
     _statemachine: {fileID: 2216847674985237963}
-    _selectedState: Saving
+    _selectedState: Ready
     States:
     - Ready
     - Set
