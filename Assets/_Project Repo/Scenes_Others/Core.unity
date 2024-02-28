@@ -956,50 +956,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1522481336}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &610216223
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 610216225}
-  - component: {fileID: 610216224}
-  m_Layer: 0
-  m_Name: Audio Controller
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &610216224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 610216223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd0b9b680a2951649b300d01943cf915, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &610216225
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 610216223}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.13633347, y: 0.1953978, z: 0.07387519}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &659138724
 GameObject:
   m_ObjectHideFlags: 0
@@ -1766,10 +1722,10 @@ MonoBehaviour:
     heightFollowThrehold: 0.1
     FollowSpeed: 0.1
     RotationSpeed: 0.1
-    positionModel: {fileID: 0}
-    heightModel: {fileID: 0}
-    depthModel: {fileID: 0}
-    rotationModel: {fileID: 0}
+    positionModel: {fileID: 1317568006}
+    heightModel: {fileID: 1317568009}
+    depthModel: {fileID: 1317568010}
+    rotationModel: {fileID: 1317568008}
   view:
     _canvas: {fileID: 0}
     anchors:
@@ -2914,10 +2870,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1423385361}
     - target: {fileID: 3629328622278388745, guid: 3b54702702e724a43be751b07adb79cb, type: 3}
-      propertyPath: m_SceneBindings.Array.data[5].value
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3629328622278388745, guid: 3b54702702e724a43be751b07adb79cb, type: 3}
       propertyPath: m_ExposedReferences.m_References.Array.data[0].second
       value: 
       objectReference: {fileID: 1423385353}
@@ -2965,14 +2917,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: '[Core]'
       objectReference: {fileID: 0}
-    - target: {fileID: 8312191061918762518, guid: 3b54702702e724a43be751b07adb79cb, type: 3}
-      propertyPath: screenFade
-      value: 
-      objectReference: {fileID: 1066615867}
-    - target: {fileID: 9194825136647052200, guid: 3b54702702e724a43be751b07adb79cb, type: 3}
-      propertyPath: DirectorModels.Array.data[2].directorEvent.OnFinish.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2987,6 +2931,5 @@ SceneRoots:
   - {fileID: 787588607}
   - {fileID: 1882179748}
   - {fileID: 1066615862}
-  - {fileID: 610216225}
   - {fileID: 539229337}
   - {fileID: 1317568011}
