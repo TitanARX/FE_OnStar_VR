@@ -8,12 +8,14 @@ public class SceneInitializer : MonoBehaviour
     public UnityEvent OnInitializationScene;
     public UnityEvent OnSceneReady;
 
+    public float startDelay = 1.5f;
+
 
     private IEnumerator Start()
     {
         OnSceneReady?.Invoke();
 
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(startDelay);
 
         OnInitializationScene.Invoke();
     }

@@ -6,24 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class SceneAsyncLoader : MonoBehaviour
 {
-    [SerializeField]
-    private OVRScreenFade screenFade;
-
+    
     [SerializeField]
     private string _levelToLoad = "Scenario 1";
 
-    private void OnValidate()
-    {
-        screenFade = FindObjectOfType<OVRScreenFade>();
-    }
-
-    private void Awake()
-    {
-        if (screenFade == null)
-            return;
-
-        screenFade.fadeOnStart = true;
-    }
 
     public void LoadScene()
     {
@@ -31,4 +17,5 @@ public class SceneAsyncLoader : MonoBehaviour
 
         SceneManager.LoadScene(_levelToLoad);
     }
+   
 }
